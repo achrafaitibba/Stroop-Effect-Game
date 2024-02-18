@@ -1,5 +1,5 @@
 import './App.css';
-import GameArea from './components/GameArea';
+import GameArea from './Components/GameArea/GameArea';
 
 function App() {
   return (

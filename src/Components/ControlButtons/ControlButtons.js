@@ -4,7 +4,7 @@ const ControlButtons = () => {
     
     return (
         <div>
-            Hello from ${}
+            Hello from ControlButtons
         </div>
     );
 }

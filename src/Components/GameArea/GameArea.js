@@ -1,9 +1,9 @@
 import React from "react";
-import CurrentColor from "./CurrentColor";
-import Timer from "./Timer";
-import Buttons from "./Buttons";
-import Score from "./Score";
-import ControlButtons from "./ControlButtons";
+import CurrentColor from "../CurrentColor/CurrentColor";
+import Timer from "../Timer/Timer";
+import Buttons from "../Buttons/Buttons";
+import Score from "../Score/Score";
+import ControlButtons from "../ControlButtons/ControlButtons";
 
 const GameArea = () => {
   return (
@@ -13,6 +13,7 @@ const GameArea = () => {
       <Buttons></Buttons>
       <Score></Score>
       <ControlButtons></ControlButtons>
+      Hello from Game Area
     </div>
   );
 };
