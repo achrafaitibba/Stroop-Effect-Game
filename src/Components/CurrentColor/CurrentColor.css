@@ -1,0 +1,14 @@
+:root {
+    --text-color: red;
+}
+.currentColor {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+}
+header {
+    font-size: 4em;
+    margin-top: 100px;
+    text-shadow: 0 10px 50px var(--text-color);
+    color: var(--text-color);
+}

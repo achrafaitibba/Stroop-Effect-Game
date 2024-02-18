@@ -1,0 +1,41 @@
+:root {
+    --display-modal: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    text-align: center;
+    align-content: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+
+.game {
+    background-image: linear-gradient(to right,
+            rgba(33, 33, 34, 0.637),
+            rgb(2, 1, 1));
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 570px;
+    height: 980px;
+    border-radius: 2%;
+    box-shadow: 0 5px 80px rgba(19, 9, 210, 0.63);
+    transition: 3s ease;
+
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.time-out-modal {
+    
+    /* display: var(--display-modal); */
+}

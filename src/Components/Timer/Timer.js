@@ -1,7 +1,9 @@
 import React from "react";
-
-const Timer = () => {
-  return <div>Hello from Timer</div>;
+import "./Timer.css"
+const Timer = ({timer}) => {
+  return <div className="timer">
+    <h1 className="timer-value">{timer}</h1>
+  </div>;
 };
 
 export default Timer;

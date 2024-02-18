@@ -1,7 +1,13 @@
 import React from "react";
-
-const CurrentColor = () => {
-  return <div>Hello from CurrentColor</div>;
+import "./CurrentColor.css";
+const CurrentColor = ({ currentRandomColor }) => {
+  return (
+    <div className="currentColor">
+      <header style={{ "--text-color": `${currentRandomColor}` }}>
+        {currentRandomColor.toUpperCase()}
+      </header>
+    </div>
+  );
 };
 
 export default CurrentColor;

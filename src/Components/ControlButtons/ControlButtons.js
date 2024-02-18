@@ -4,7 +4,7 @@ const ControlButtons = () => {
     
     return (
         <div>
-            Hello from ControlButtons
+            <button className="btn reset" style={{"--btn-color":"Gray", "fontSize":"1.2em"}}>Reset</button>  
         </div>
     );
 }
