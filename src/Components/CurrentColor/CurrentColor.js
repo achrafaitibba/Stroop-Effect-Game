@@ -1,10 +1,10 @@
 import React from "react";
 import "./CurrentColor.css";
-const CurrentColor = ({ currentRandomColor }) => {
+const CurrentColor = ({ currentRandomColor, textColor }) => {
   return (
     <div className="currentColor">
       <header style={{ "--text-color": `${currentRandomColor}` }}>
-        {currentRandomColor.toUpperCase()}
+        {textColor.toUpperCase()}
       </header>
     </div>
   );

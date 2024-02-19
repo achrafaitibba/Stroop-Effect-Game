@@ -1,12 +1,20 @@
 import React from "react";
 import "./TimeOutModal.css";
-const TimeOutModal = ({display}) => {
+const TimeOutModal = ({ setDisplay, display, setTimer, time, timeOutMessage, replay }) => {
   return (
-    <div className="modal" style={{"--display-modal": `${display}`}}>
+    <div className="modal" style={{ "--display-modal": `${display}` }}>
       <div className="bg"></div>
       <div className="content">
-        <h1>Timeout play faster !!</h1>
-        <button className="btn replay">Replay</button>
+        <h1>{timeOutMessage}</h1>
+        <button
+          className="btn replay"
+          onClick={() => {
+            setTimer(time);
+            setDisplay("none");
+          }}
+        >
+          Replay
+        </button>
       </div>
     </div>
   );
