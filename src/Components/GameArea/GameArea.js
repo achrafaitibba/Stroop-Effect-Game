@@ -7,9 +7,12 @@ import ControlButtons from "../ControlButtons/ControlButtons";
 import TimeOutModal from "../Modal/TimeOutModal";
 import "./GameArea.css";
 
-// timeout doesn't decrease if clicking fast answers
-// when modal "block" = wait till replay clicked then generate random color/text
-// after time is out, clicking replay doesn't generate random color/text
+/** Bugs to fix hh
+ * -timeout doesn't decrease if clicking fast answers
+ * -when modal "block" = wait till replay clicked then generate random color/text
+ * -after time is out, clicking replay doesn't generate random color/text
+ */
+
 const GameArea = () => {
   const colors = ["red", "blue", "yellow", "white"];
   const time = 5;
@@ -46,32 +49,32 @@ const GameArea = () => {
         "Correct> " +
           "chosenColor :" +
           chosenColor +
-          " /textColor: " +
+          " /correct Answer: " +
           currentRandomColor
       );
-      setCurrentRandomColor(colors[Math.floor(Math.random() * 4)]);
-      setTextColor(colors[Math.floor(Math.random() * 4)]);
-      setScore(score + 1);
-      clearTimeout(myTimeOut);
+      let sc = score + 1;
+      basicChanges(sc);
       setTimer(time);
     } else {
       console.log(
         "Incorrect> " +
           "chosenColor :" +
           chosenColor +
-          " /textColor: " +
+          " /correct Answer: " +
           currentRandomColor
       );
       checkPersonalRecord(score);
-      setCurrentRandomColor(colors[Math.floor(Math.random() * 4)]);
-      setTextColor(colors[Math.floor(Math.random() * 4)]);
-      setScore(0);
+      basicChanges(0);
       setTimeOutMessage("Incorrect answer");
       setDisplay("block");
-      clearTimeout(myTimeOut);
     }
   }
-
+  function basicChanges(sc) {
+    setScore(sc);
+    setCurrentRandomColor(colors[Math.floor(Math.random() * 4)]);
+    setTextColor(colors[Math.floor(Math.random() * 4)]);
+    clearTimeout(myTimeOut);
+  }
   function checkPersonalRecord(gameScore) {
     if (gameScore > personalRecord) {
       setPersonalRecord(gameScore);
@@ -79,11 +82,8 @@ const GameArea = () => {
   }
 
   function reset() {
-    setScore(0);
     setPersonalRecord(0);
-    setCurrentRandomColor(colors[Math.floor(Math.random() * 4)]);
-    setTextColor(colors[Math.floor(Math.random() * 4)]);
-    clearTimeout(myTimeOut);
+    basicChanges(0);
     setTimer(time);
   }
 
@@ -108,7 +108,7 @@ const GameArea = () => {
       <TimeOutModal
         timeOutMessage={timeOutMessage}
         setDisplay={setDisplay}
-        display={display} // `${display}` vs display ?
+        display={display}
         setTimer={setTimer}
         time={time}
       ></TimeOutModal>
