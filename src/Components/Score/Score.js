@@ -8,7 +8,7 @@ const Score = ({ scoreValue, personalRecord }) => {
         Score: <span>{scoreValue}</span>
       </h1>
       <p>
-        Personal Record: <span> {personalRecord}</span>{" "}
+        Personal Record: <span>{personalRecord}</span>
       </p>
     </div>
   );
