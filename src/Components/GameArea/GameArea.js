@@ -47,7 +47,7 @@ const GameArea = () => {
           "chosenColor :" +
           chosenColor +
           " /textColor: " +
-          textColor
+          currentRandomColor
       );
       setCurrentRandomColor(colors[Math.floor(Math.random() * 4)]);
       setTextColor(colors[Math.floor(Math.random() * 4)]);
@@ -60,7 +60,7 @@ const GameArea = () => {
           "chosenColor :" +
           chosenColor +
           " /textColor: " +
-          textColor
+          currentRandomColor
       );
       checkPersonalRecord(score);
       setCurrentRandomColor(colors[Math.floor(Math.random() * 4)]);
