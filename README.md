@@ -13,7 +13,7 @@ This web application demonstrates the Stroop effect, a psychological phenomenon 
 1. Open the web application in a modern web browser.
 2. Click the "Start" button to begin the Stroop effect demonstration.
 3. For each word presented, select the color of the ink used to write the word, not the word itself.
-4. Repeat until the timer runs out or until you complete the specified number of rounds.
+4. Repeat until the timer runs out.
 5. View your score and time taken to complete the task.
 
 ## Technologies Used
